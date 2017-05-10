@@ -1,0 +1,21 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+	"extends": "airbnb-base",
+    "parserOptions": {
+        "sourceType": "module"
+    },
+	"rules": {
+		"eqeqeq": 0,
+		"func-names": ["warn", "as-needed"],
+		"linebreak-style": ["error", "windows"],
+		"import/no-mutable-exports": 1,
+		"indent": ["warn", "tab"],
+		"max-len": ["warn", 120],
+		"no-console": 0,
+		"no-tabs": 0,
+		"wrap-iife": ["error", "inside"]
+	}
+}
