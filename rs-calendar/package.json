@@ -1,0 +1,24 @@
+{
+  "name": "RS-Calendar",
+  "version": "1.0.0",
+  "description": "Rolling Scopes School Calendar Task",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-bootstrap": "^0.31.0",
+    "react-dom": "^15.5.4",
+    "react-loading-indicator": "^1.0.2"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pavel Egorov",
+  "license": "ISC"
+}
