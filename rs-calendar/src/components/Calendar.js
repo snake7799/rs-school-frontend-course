@@ -6,32 +6,32 @@ import WeekDays from './WeekDays';
 import MonthDates from './MonthDates';
 
 export default class Calendar extends React.Component {
-    constructor(props) {
-        super(props);
-		
-        const date = new Date();
-        this.state = { 
-            events: null,
-            trainers: null,
-            month: date.getMonth(),
-            year: date.getFullYear(),
-            selectedMonth: null,
-            selectedYear: null,
-            weekDays: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat','Sun'],
-            monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-            firstOfMonth: null,
-            lastOfMonth: null,
-            daysInMonth: null,
-            daysInPrevMonth: null,
-        };
-		
-        this.selectDate = this.selectDate.bind(this);
-        this.calculateDates = this.calculateDates.bind(this);
-        this.getPrevious = this.getPrevious.bind(this);
-        this.getNext = this.getNext.bind(this);
-    }
+	constructor(props) {
+		super(props);
 
-	selectDate(month, year, date, element) {    
+		const date = new Date();
+		this.state = {
+			events: null,
+			trainers: null,
+			month: date.getMonth(),
+			year: date.getFullYear(),
+			selectedMonth: null,
+			selectedYear: null,
+			weekDays: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+			monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+			firstOfMonth: null,
+			lastOfMonth: null,
+			daysInMonth: null,
+			daysInPrevMonth: null
+		};
+
+		this.selectDate = this.selectDate.bind(this);
+		this.calculateDates = this.calculateDates.bind(this);
+		this.getPrevious = this.getPrevious.bind(this);
+		this.getNext = this.getNext.bind(this);
+	}
+
+	selectDate(month, year, date, element) {
 		if (this.state.selectedElement) {
 			this.state.selectedElement.classList.remove('selected');
 		}
@@ -40,129 +40,117 @@ export default class Calendar extends React.Component {
 		this.setState({
 			selectedMonth: month,
 			selectedYear: year,
-			selectedElement: element.target,
+			selectedElement: element.target
 		});
 	}
-	
-    calculateDates(month, year) {
-        if (this.state.selectedElement) {
-            if (this.state.selectedMonth !== month || this.state.selectedYear !== year) {
-                this.state.selectedElement.classList.remove('selected');
-            } else {
-                this.state.selectedElement.classList.add('selected');
-            }
-        }
-        return {
-            firstOfMonth: new Date(year, month, 1),
-            lastOfMonth: new Date(year, month + 1, 0),
-            daysInMonth: new Date(year, month + 1, 0).getDate(),
-            daysInPrevMonth: new Date(year, month, 0).getDate(),
-        }
-    }
 
-    getPrevious() {
-        let state = {};
-		
-        if (this.state.month > 0) {
-            state.month = this.state.month - 1;
-            state.year = this.state.year;
-        } else {
-            state.month = 11;
-            state.year = this.state.year - 1;
-        }
+	calculateDates(month, year) {
+		if (this.state.selectedElement) {
+			if (this.state.selectedMonth !== month || this.state.selectedYear !== year) {
+				this.state.selectedElement.classList.remove('selected');
+			} else {
+				this.state.selectedElement.classList.add('selected');
+			}
+		}
+		return {
+			firstOfMonth: new Date(year, month, 1),
+			lastOfMonth: new Date(year, month + 1, 0),
+			daysInMonth: new Date(year, month + 1, 0).getDate(),
+			daysInPrevMonth: new Date(year, month, 0).getDate()
+		};
+	}
 
-        Object.assign(state, this.calculateDates.call(null, state.month, state.year));
-        this.setState(state);
-    }
+	getPrevious() {
+		const state = {};
 
-    getNext() {
-        let state = {};
-		
-        if (this.state.month < 11) {
-            state.month = this.state.month + 1;
-            state.year = this.state.year;
-        } else {
-            state.month = 0;
-            state.year = this.state.year + 1;
-        }
+		if (this.state.month > 0) {
+			state.month = this.state.month - 1;
+			state.year = this.state.year;
+		} else {
+			state.month = 11;
+			state.year = this.state.year - 1;
+		}
 
-        Object.assign(state, this.calculateDates.call(null, state.month, state.year));
-        this.setState(state);
-    }
+		Object.assign(state, this.calculateDates.call(null, state.month, state.year));
+		this.setState(state);
+	}
 
-    getEvents() {
+	getNext() {
+		const state = {};
+
+		if (this.state.month < 11) {
+			state.month = this.state.month + 1;
+			state.year = this.state.year;
+		} else {
+			state.month = 0;
+			state.year = this.state.year + 1;
+		}
+
+		Object.assign(state, this.calculateDates.call(null, state.month, state.year));
+		this.setState(state);
+	}
+
+	getEvents() {
 		fetch('http://128.199.53.150/events')
-			.then(response => {
-			return response.json();
-		})
-			.then(response => {
-			this.setState({
-				events: response,
-			});
-		});
-    }
+			.then(response => response.json())
+			.then(response => this.setState({ events: response }));
+	}
 
-    getTrainers() {
+	getTrainers() {
 		fetch('http://128.199.53.150/trainers')
-			.then(response => {
-			return response.json();
-		})
-			.then(response => {
-			this.setState({
-				trainers: response,
-			});
-		});
-    }
+			.then(response => response.json())
+			.then(response => this.setState({ trainers: response }));
+	}
 
-    componentWillMount() {
-        this.setState(this.calculateDates.call(null, this.state.month, this.state.year));
-    }
+	componentWillMount() {
+		this.setState(this.calculateDates.call(null, this.state.month, this.state.year));
+	}
 
-    componentDidMount() {
-        this.getEvents();
-        this.getTrainers();
-    }
+	componentDidMount() {
+		this.getEvents();
+		this.getTrainers();
+	}
 
 	getChildContext() {
 		return {
-			month: this.state.month, 
+			month: this.state.month,
 			year: this.state.year,
 			firstOfMonth: this.state.firstOfMonth,
 			daysInPrevMonth: this.state.daysInPrevMonth,
 			daysInMonth: this.state.daysInMonth,
 			onSelect: this.selectDate,
-			lastOfMonth: this.state.lastOfMonth,
-		}
+			lastOfMonth: this.state.lastOfMonth
+		};
 	}
-	
-    render() {
-        return(
-            <div className="calendar">
-				<Header 
-					monthNames={this.state.monthNames} 
-					month={this.state.month} 
+
+	render() {
+		return (
+			<div className="calendar">
+				<Header
+					monthNames={this.state.monthNames}
+					month={this.state.month}
 					year={this.state.year}
-					onPrev={this.getPrevious} 
-					onNext={this.getNext} 
+					onPrev={this.getPrevious}
+					onNext={this.getNext}
 				/>
 
 				<WeekDays weekDays={this.state.weekDays} />
 
-				<MonthDates 
+				<MonthDates
 					events={this.state.events}
 					trainers={this.state.trainers}
 				/>
-            </div>
-        );
-    }
+			</div>
+		);
+	}
 }
 
 Calendar.childContextTypes = {
-	month: PropTypes.number, 
+	month: PropTypes.number,
 	year: PropTypes.number,
 	firstOfMonth: PropTypes.instanceOf(Date),
 	daysInPrevMonth: PropTypes.number,
 	daysInMonth: PropTypes.number,
 	onSelect: PropTypes.func,
-	lastOfMonth: PropTypes.instanceOf(Date),
+	lastOfMonth: PropTypes.instanceOf(Date)
 };

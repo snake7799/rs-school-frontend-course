@@ -4,42 +4,41 @@ import { Button } from 'react-bootstrap';
 
 export default class NextMonth extends React.Component {
 	getNextDates() {
-		let nextDates = [];
+		const nextDates = [];
 		let lastOfMonthDay = this.context.lastOfMonth.getDay();
-		
+
 		if (lastOfMonthDay === 0) lastOfMonthDay = 7;
 
 		for (let i = 1; i <= 7 - lastOfMonthDay; i += 1) {
-			nextDates.push('0' + i);
+			nextDates.push(`0${i}`);
 		}
 		return nextDates;
 	}
-	
+
 	getEvent(item) {
 		let year = this.context.year;
 		let month = this.context.month + 2;
-		
-		if (month < 10) month = '0'+ month;
+
+		if (month < 10) month = `0${month}`;
 		if (this.context.month === 11) {
-			year = year + 1;
+			year += 1;
 			month = '01';
 		}
 
-		return this.props.events.find(event => {
-			return event.start.slice(0, 10) === `${year}-${month}-${item}`;
-		});
+		return this.props.events.find(event =>
+			event.start.slice(0, 10) === `${year}-${month}-${item}`);
 	}
-	
+
 	render() {
 		const nextDates = this.getNextDates();
-		return(
+		return (
 			<div className="next-month-dates">
-				{nextDates.map(item => {
+				{nextDates.map((item) => {
 					const event = this.getEvent(item);
-					return(
+					return (
 						<div className="modal-container" key={item}>
 							<Button
-								className="cell" 
+								className="cell"
 								key={item}
 								onClick={() => {
 									if (event) this.props.cellClickHandler(event);
@@ -53,18 +52,18 @@ export default class NextMonth extends React.Component {
 										<br/>
 										{event ? event.title : ''}
 									</div>
-								</div>        
-							</Button> 
+								</div>
+							</Button>
 						</div>
-					)
+					);
 				})}
 			</div>
-		)
+		);
 	}
 }
 
 NextMonth.contextTypes = {
-	month: PropTypes.number, 
+	month: PropTypes.number,
 	year: PropTypes.number,
-	lastOfMonth: PropTypes.instanceOf(Date),
+	lastOfMonth: PropTypes.instanceOf(Date)
 };

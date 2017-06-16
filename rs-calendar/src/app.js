@@ -4,6 +4,6 @@ import { render } from 'react-dom';
 import Calendar from './components/Calendar';
 
 render(
-    <Calendar />, 
-    document.querySelector('#root')
+	<Calendar />,
+	document.querySelector('#root')
 );
