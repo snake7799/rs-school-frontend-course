@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Header from './Header';
 import WeekDays from './WeekDays';
 import MonthDates from './MonthDates';
+import Conventions from './Conventions';
 
 export default class Calendar extends React.Component {
 	constructor(props) {
@@ -140,6 +141,8 @@ export default class Calendar extends React.Component {
 					events={this.state.events}
 					trainers={this.state.trainers}
 				/>
+
+				<Conventions />
 			</div>
 		);
 	}

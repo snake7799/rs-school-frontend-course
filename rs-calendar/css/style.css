@@ -28,6 +28,11 @@ body {
 .next-month:focus,
 .modal-header .close,
 .event-cover,
+.event,
+.deadline,
+.lecture,
+.workshop,
+.webinar,
 .modal-title,
 .modal-footer .btn {
 	color: #fff;
@@ -291,41 +296,95 @@ body {
 	cursor: pointer;
 }
 
+.conventions {
+	display: none;
+}
 
-@media (max-width: 700px) {
-	.cells {
-		height: 80px;
-	}	
+
+@media (max-width: 1440px) {
+	.navigation {
+		margin-right: 15px;
+	}
+}
+
+@media (max-width: 992px) {
+	.cell {
+		height: 125px;
+	}
+	
+	.day {
+		margin-bottom: 10px;
+	}
+}
+
+@media (max-width: 768px) {
+	.calendar {
+		margin: 5px 0;
+	}
+	
+	.navigation {
+		margin-right: 8px;
+	}
+	
+	.cell {
+		height: 105px;
+	}
+	
+	.day {
+		margin-bottom 8px;
+	}
+	
+	.event-cover {
+		border-radius: 50%;
+	}
+	
+	.cell .event,
+	.cell .deadline,
+	.cell .lecture,
+	.cell .workshop,
+	.cell .webinar {
+		width: 25px;
+		height: 25px;
+		margin: 0 auto;
+	}
 	
 	.event {
-		color: blue;
-		height: 25px;
+		color: #029ae4;
 	}
 	
 	.deadline {
-		color: red;
-		height: 25px;
-
-	}
-	
-	.webinar {
-		color: green;
-		height: 25px;
+		color: #f05722;
 	}
 
 	.lecture {
 		color: #5c5b5b;
-		height: 25px;
 	}
 	
-	.workshop {
-		color: orange;
-		height: 25px;
+	.webinar {
+		color: #33b679;
 	}
-}
 
-@media (max-width: 500px) {
-	.month-name{
-		margin-left: 60%;
+	.workshop {
+		color: #ffb837;
+	}
+	
+	.conventions {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	
+	.conventions-item {
+		display: flex;
+		align-items: center;
+		margin: 10px;
+	}
+	
+	.conventions-item div {
+		width: 25px;
+		height: 25px;
+		border-radius: 50%;
+		margin-right: 10px
 	}
 }

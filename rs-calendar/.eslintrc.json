@@ -16,6 +16,7 @@
 	],
 	"rules": {
 		"arrow-body-style": ["error", "as-needed", {"requireReturnForObjectLiteral": true}],
+		"class-methods-use-this": "off", 
 		"comma-dangle": ["warn", "never"],
 		"indent": ["warn", "tab"],
 		"linebreak-style": ["warn",	"windows"],
