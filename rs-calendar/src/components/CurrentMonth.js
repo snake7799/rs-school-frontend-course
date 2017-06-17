@@ -11,16 +11,30 @@ export default class CurrentMonth extends React.Component {
 		return currentDates;
 	}
 
-	getEvent(item) {
-		let itm = item;
-		let month = this.context.month;
+	checkMonthDate(currentMonth, currentDate) {
+		let month = currentMonth + 1;
+		let date = currentDate;
 
-		if (month < 9) month = `0${this.context.month + 1}`;
-		else month = this.context.month + 1;
-		if (itm < 10) itm = `0${itm}`;
+		if (currentMonth < 10) month = `0${month}`;
+		if (date < 10) date = `0${date}`;
+
+		return [month, date];
+	}
+
+	getEvent(item) {
+		const [month, date] = this.checkMonthDate(this.context.month, item);
 
 		return this.props.events.find(event =>
-			event.start.slice(0, 10) === `${this.context.year}-${month}-${itm}`);
+			event.start.slice(0, 10) === `${this.context.year}-${month}-${date}`);
+	}
+
+	isItCurrentDate(item) {
+		const [month, date] = this.checkMonthDate(this.context.month, item);
+		const [currentMonth, currentDate] = this.checkMonthDate(this.context.dateObject.getMonth(), this.context.dateObject.getDate());
+
+		if (`${this.context.year}-${month}-${date}` === `${this.context.dateObject.getFullYear()}-${currentMonth}-${currentDate}`) return true;
+
+		return false;
 	}
 
 	render() {
@@ -41,7 +55,9 @@ export default class CurrentMonth extends React.Component {
 									key={item}
 									onClick={this.context.onSelect.bind(this, this.context.year, this.context.month, item)}
 								>
-									<div className="day">{(item < 10) ? `0${item}` : item}</div>
+									<div className={(this.isItCurrentDate(item)) ? 'day current-date' : 'day'}>
+										{(item < 10) ? `0${item}` : item}
+									</div>
 									<div className={`event-cover ${event ? event.type : ''}`}>
 										{event ? `${event.type}:` : ''}
 										<br/>
@@ -58,6 +74,7 @@ export default class CurrentMonth extends React.Component {
 }
 
 CurrentMonth.contextTypes = {
+	dateObject: PropTypes.object,
 	month: PropTypes.number,
 	year: PropTypes.number,
 	daysInMonth: PropTypes.number,

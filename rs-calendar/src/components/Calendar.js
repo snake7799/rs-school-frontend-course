@@ -10,12 +10,12 @@ export default class Calendar extends React.Component {
 	constructor(props) {
 		super(props);
 
-		const date = new Date();
+		this.date = new Date();
 		this.state = {
 			events: null,
 			trainers: null,
-			month: date.getMonth(),
-			year: date.getFullYear(),
+			month: this.date.getMonth(),
+			year: this.date.getFullYear(),
 			selectedMonth: null,
 			selectedYear: null,
 			weekDays: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
@@ -114,6 +114,7 @@ export default class Calendar extends React.Component {
 
 	getChildContext() {
 		return {
+			dateObject: this.date,
 			month: this.state.month,
 			year: this.state.year,
 			firstOfMonth: this.state.firstOfMonth,
@@ -149,6 +150,7 @@ export default class Calendar extends React.Component {
 }
 
 Calendar.childContextTypes = {
+	dateObject: PropTypes.object,
 	month: PropTypes.number,
 	year: PropTypes.number,
 	firstOfMonth: PropTypes.instanceOf(Date),
