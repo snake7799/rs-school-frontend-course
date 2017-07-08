@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Forms &amp; Widgets RS Task by Pavel Egorov</title>
+	<link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+	<section class="bar-graph">
+		<div class="markings">
+			<div>
+				<p>40</p>
+			</div>
+			<div>
+				<p>30</p>
+			</div>
+			<div>
+				<p>20</p>
+			</div>
+			<div>
+				<p>0</p>
+			</div>
+		</div>
+		<div class="columns">
+			<div class="mon-column">
+				<div class="tooltip"><span>17</span></div>
+				<p>Mon</p>
+			</div>
+			<div class="tues-column">
+				<div class="tooltip"><span>19</span></div>
+				<p>Tues</p>
+			</div>
+			<div class="wed-column">
+				<div class="tooltip"><span>26</span></div>
+				<p>Wed</p>
+			</div>
+			<div class="thu-column">
+				<div class="tooltip"><span>32</span></div>
+				<p>Thu</p>
+			</div>
+			<div class="fri-column">
+				<div class="tooltip"><span>29</span></div>
+				<p>Fri</p>
+			</div>
+			<div class="sat-column">
+				<div class="tooltip"><span>34</span></div>
+				<p>Sat</p>
+			</div>
+			<div class="sun-column">
+				<div class="tooltip"><span>31</span></div>
+				<p>Sun</p>
+			</div>
+		</div>
+	</section>
+	<section class="calendar">
+		<div class="top-panel">
+			<div class="month-nav">
+				<a href="#" class="sprite sprite-prev"></a>
+				<h3>May 2014</h3>
+				<a href="#" class="sprite sprite-next"></a>
+			</div>
+		</div>
+		<table>
+			<tr>
+				<th>Sun</th>
+				<th>Mon</th>
+				<th>Tue</th>
+				<th>Wed</th>
+				<th>Thu</th>
+				<th>Fri</th>
+				<th>Sat</th>
+			</tr>
+			<tr>
+				<td class="prev-next-days">29</td>
+				<td class="prev-next-days">30</td>
+				<td>1</td>
+				<td>2</td>
+				<td class="current-day">3</td>
+				<td>4</td>
+				<td>5</td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td class="important-day">7</td>
+				<td>8</td>
+				<td>9</td>
+				<td>10</td>
+				<td>11</td>
+				<td>12</td>
+			</tr>
+			<tr>
+				<td>13</td>
+				<td>14</td>
+				<td>15</td>
+				<td>16</td>
+				<td>17</td>
+				<td>18</td>
+				<td>19</td>
+			</tr>
+			<tr>
+				<td>20</td>
+				<td>21</td>
+				<td>22</td>
+				<td class="important-day">23</td>
+				<td>24</td>
+				<td>25</td>
+				<td>26</td>
+			</tr>
+			<tr>
+				<td>27</td>
+				<td>28</td>
+				<td>29</td>
+				<td>30</td>
+				<td class="prev-next-days">1</td>
+				<td class="prev-next-days">2</td>
+				<td class="prev-next-days">3</td>
+			</tr>
+		</table>
+		<button class="button-action">Add event</button>
+	</section>
+	<section class="destination">
+		<ul>
+			<li><i class="sprite sprite-eye"></i></li>
+			<li><i class="sprite sprite-marker"></i></li>
+			<li><i class="sprite sprite-star"></i></li>
+		</ul>
+		<div class="content">
+			<h3>My most favourite place in the world</h3>
+			<p><span>154</span> Reviews</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a pulvinar ipsum. Aliquam sit amet iaculis dolor. Vivamus sed diam sollicitudin.</p>
+			<a href="#">Read more</a>
+		</div>
+		<img src="img/destination.png" width="363px" height="340px" alt="My first favourite place">
+		<div class="counters">
+			<div class="sprite sprite-message"><span>752</span></div>
+			<div class="sprite sprite-heart"><span>2709</span></div>
+		</div>
+	</section>
+	<section class="booking">
+		<div class="place">
+			<img src="img/hotel-relais.png" width="346px" height="185px" alt="Hotel Relais, Paris">
+			<h3>Hotel Relais</h3>
+			<p class="sprite sprite-booking-marker">Paris, France</p>
+		</div>
+		<form action="#">
+			<fieldset>
+				<label for="checkIn">Check in</label>
+				<div class="custom-input">
+					<input type="text" id="checkIn" placeholder="9 July, 2016">
+					<div class="button-layer">
+						<a href="#" class="sprite sprite-calendar"></a>
+					</div>
+				</div>
+			</fieldset>
+			<fieldset>
+				<label for="checkOut">Check out</label>
+				<div class="custom-input">
+					<input type="text" id="checkOut" placeholder="16 July, 2016">
+					<div class="button-layer">
+						<a href="#" class="sprite sprite-calendar"></a>
+					</div>
+				</div>
+			</fieldset>
+			<fieldset class="checkbox">
+				<input type="checkbox" id="checkbox">
+				<label for="checkbox">Flexible dates</label>
+			</fieldset>
+			<fieldset class="items-select">
+				<div>
+					<h3>Adults</h3>
+					<select>
+						<option>1</option>
+						<option selected>2</option>
+						<option>3</option>
+						<option>4</option>
+					</select>
+				</div>
+				<div>
+					<h3>Children</h3>
+					<select>
+						<option selected>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+					</select>
+				</div>
+			</fieldset>
+			<button type="submit" class="button-action button-action-booking"><i class="sprite sprite-search"></i>Search Rooms</button>
+		</form>
+	</section>
+	<section class="email">
+		<form action="#">
+			<div class="custom-input">
+				<input type="text" id="email" placeholder="Email">
+				<div class="email-address">
+					<p>rick.james@mail.com</p>
+					<i class="sprite sprite-close"></i>
+				</div>			
+				<i class="add-email-btn sprite sprite-plus"></i>
+			</div>
+			<div class="custom-input subject-input">
+				<input type="text" id="subject" placeholder="Subject">
+				<input type="file" class="upload" name="upload">
+				<i class="sprite sprite-staple"></i>
+			</div>
+			<textarea name="textarea" placeholder="Message"></textarea>
+			<button type="submit" class="button-action email-send-btn">Send</button>
+		</form>
+	</section>
+</body>
+	
+</html>

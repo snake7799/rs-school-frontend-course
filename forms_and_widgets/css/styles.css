@@ -1,0 +1,819 @@
+@import "normalize.css";
+@import "fonts.css";
+
+
+body {
+	background-color: #d9d9d9;
+}
+
+body,
+input[placeholder],
+textarea[placeholder] {
+	font-family: 'Gotham Book', Helvetica, Arial, sans-serif;
+}
+
+.columns p,
+.button-action,
+.markings p,
+.booking form label,
+.items-select h3,
+.content p:first-of-type {
+	font-family: 'Gotham Medium', Helvetica, Arial, sans-serif;
+}
+
+.columns .tooltip span,
+.month-nav,
+.calendar .current-day,
+.button-action,
+.counters,
+.button-layer i,
+.email-address {
+	color: #fff;
+}
+
+.markings div,
+.columns p,
+.calendar table,
+.calendar table td,
+.booking form {
+	color: #666;
+}
+
+.content p:first-of-type,
+.content p:last-of-type,
+.add-email-btn,
+.subject-input input[placeholder],
+.subject-input i,
+textarea[placeholder] {
+	color: #999;
+}
+
+.calendar .important-day,
+.content a,
+.counters div:hover span,
+.counters div:focus span {
+	color: #fb6362;
+}
+
+.columns .tooltip,
+.top-panel,
+.destination ul,
+.email-address {
+	background-color: #404a58;
+}
+
+.columns div,
+.calendar .current-day,
+button,
+.destination ul li:first-child,
+.button-layer:hover,
+.button-layer:focus {
+	background-color: #fb6362;
+}
+
+button,
+.calendar table td,
+.destination ul li,
+.counters div,
+.button-layer:hover,
+.button-layer:focus,
+.checkbox input+label,
+.items-select select,
+.email-address i,
+.add-email-btn,
+.subject-input i,
+.subject-input .upload {
+	cursor: pointer;
+}
+
+.bar-graph,
+.calendar,
+.destination,
+.booking,
+.email {
+	background-color: #fff;
+	border-radius: 4px;
+	margin: 0 auto;
+	margin-top: 30px;
+	box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, .44);
+}
+
+.sprite {
+	background-image: url('../img/sprite.png');
+	background-repeat: no-repeat;
+}
+
+.sprite-next {
+	background-position: 0 0;
+}
+
+.sprite-prev {
+	background-position: 0 -12px;
+}
+
+.sprite-eye {
+	height: 17.5px;
+	top: 48px;
+	left: 22px;
+	background-position: 0 -120px;
+}
+
+.sprite-marker {
+	height: 26px;
+	top: 41px;
+	left: 28px;
+	background-position: 0 -138px;
+}
+
+.sprite-star {
+	height: 20px;
+	top: 45px;
+	left: 24px;
+	background-position: 0 -164px;
+}
+
+.sprite-message {
+	background-position: 0 -78px;
+}
+
+.sprite-heart {
+	background-position: 0 -99.5px;
+}
+
+.sprite-booking-marker {
+	background-position: 0 -24px;
+}
+
+.sprite-calendar {
+	background-position: 0 -41px;
+}
+
+.sprite-search {
+	background-position: 0 -58px;
+}
+
+.sprite-close {
+	background-position: 0 -184px;
+}
+
+.sprite-plus {
+	background-position: 0 -192px;
+}
+
+.sprite-staple {
+	background-position: 0 -208px;
+}
+
+.bar-graph {
+	position: relative;
+	width: 791px;
+	height: 340px;
+	overflow: auto;
+}
+
+.markings div {
+	display: block;
+	font-size: 12px;
+	margin: 53px 46px 0 41px;
+	border-bottom: 1px solid #eaeaea;
+}
+
+.markings p {
+	margin-bottom: 2px;
+}
+
+.columns {
+	position: absolute;
+	height: 277px;
+	top: 0;
+	right: 0;
+	left: 104px;
+}
+
+.columns div {
+	position: absolute;
+	width: 55px;
+	height: 0;
+	bottom: 0;
+	border-radius: 2px;
+}
+
+.columns p {
+	position: absolute;
+	font-size: 12px;
+	bottom: -40px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.columns .mon-column {
+	height: 49px;
+	left: 0;
+	animation: mon-animate .6s ease-in;
+}
+
+@keyframes mon-animate {
+	0% {height: 0;}
+	100% {height: 49px;}
+}
+
+.columns .tues-column {
+	height: 62px;
+	left: 90px;
+	animation: tues-animate .8s ease-in;
+}
+
+@keyframes tues-animate {
+	0% {height: 0;}
+	100% {height: 62px;}
+}
+
+.columns .wed-column {
+	height: 119px;
+	left: 180px;
+	animation: wed-animate 1s ease-in;
+}
+
+@keyframes wed-animate {
+	0% {height: 0;}
+	100% {height: 119px;}
+}
+
+.columns .thu-column {
+	height: 158px;
+	left: 270px;
+	animation: thu-animate 1.2s ease-in;
+}
+
+@keyframes thu-animate {
+	0% {height: 0;}
+	100% {height: 158px;}
+}
+
+.columns .fri-column {
+	height: 129px;
+	left: 360px;
+	animation: fri-animate 1.4s ease-in;
+}
+
+@keyframes fri-animate {
+	0% {height: 0;}
+	100% {height: 129px;}
+}
+
+.columns .sat-column {
+	height: 169px;
+	left: 450px;
+	animation: sat-animate 1.6s ease-in;
+}
+
+@keyframes sat-animate {
+	0% {height: 0;}
+	100% {height: 169px;}
+}
+
+.columns .sun-column {
+	height: 143px;
+	left: 540px;
+	animation: sun-animate 1.8s ease-in;
+}
+
+@keyframes sun-animate {
+	0% {height: 0;}
+	100% {height: 143px;}
+}
+
+.columns .tooltip {
+	display: none;
+	position: absolute;
+	width: 55px;
+	height: 30px;
+	left: 27px;
+	text-align: center;
+	border-radius: 3px;
+	transform: translate(-27px);
+}
+
+.columns .tooltip::after {
+	content: ''; 
+	position: absolute; 
+	bottom: -15px; 
+	left: 19px; 
+	border: 8px solid transparent; 
+	border-top: 8px solid #404a58; 
+}
+
+.columns .tooltip span {
+	font-size: 12px;
+	line-height: 30px;
+}
+
+.mon-column:hover .tooltip,
+.tues-column:hover .tooltip,
+.wed-column:hover .tooltip,
+.thu-column:hover .tooltip,
+.fri-column:hover .tooltip,
+.sat-column:hover .tooltip,
+.sun-column:hover .tooltip {
+	display: block;
+	top: -45px;
+}
+
+.calendar {
+	width: 346px;
+	height: 427px;
+}
+
+.top-panel {
+	position: relative;
+	height: 63px;
+	text-align: center;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+}
+
+.month-nav {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+}
+
+.month-nav a {
+	display: inline-block;
+	width: 8px;
+	height: 12px;
+}
+
+.month-nav h3 {
+	display: inline-block;
+	font-family: 'Gotham Light';
+	font-size: 18px;
+	font-weight: normal;
+	margin: 0 77px;
+}
+
+.calendar table {
+	width: 287px;
+	font-size: 14px;
+	margin: 0 auto;
+	margin-top: 12px;
+	border-spacing: 0 !important;
+}
+
+.calendar table td,
+.calendar table th {
+	width: 41px;
+	height: 41px;
+}
+
+.calendar table td {
+	text-align: center;
+	padding: 0;
+}
+
+.calendar .prev-next-days {
+	color: #c5c5c5;
+}
+
+.calendar .current-day {
+	border-radius: 50%;
+}
+
+button {
+	border-radius: 3px;
+	border-width: 0;
+}
+
+.button-action {
+	display: block;
+	width: 299px;
+	height: 59px;
+	font-size: 16px;
+	text-transform: uppercase;
+	margin: 0 auto;
+	margin-top: 20px;
+	box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, .55);
+}
+
+.button-action:hover,
+.button-action:focus {
+	box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, .65);
+}
+
+.destination {
+	position: relative;
+	width: 792px;
+	height: 340px;
+}
+
+.destination ul {
+	position: absolute;
+	width: 72px;
+	height: 100%;
+	padding-left: 0;
+	margin: 0;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+
+.destination ul li {
+	display: block;
+	position: relative;
+	height: 33.333%;
+}
+
+.destination ul li:first-child {
+	border-top-left-radius: 4px;
+	border-bottom: 1px solid #242931;
+}
+
+.destination ul li:last-child {
+	border-top: 1px solid #242931;
+}
+
+.destination ul li i {
+	position: absolute;
+	width: 27px;
+}
+
+.content {
+	position: absolute;
+	width: 322px;
+	height: 100%;
+	left: 107px;
+}
+
+.content::after {
+	content: ''; 
+	position: absolute;
+	top: 38px;
+	right: -44px; 
+	border: 22px solid transparent;
+	border-left: 22px solid #fff;
+	z-index: 1;
+}
+
+.content h3,
+.content span {
+	color: #4d4d4d;
+}
+
+.content h3 {
+	width: 189px;
+	font-size: 21px;
+	letter-spacing: -0.62px;
+	line-height: 1.429;
+	padding-top: 5px;
+	margin-bottom: 0;
+}
+
+.content p:first-of-type,
+.content p:last-of-type {
+	font-size: 14px;
+}
+
+.content p:first-of-type {
+	margin-top: 12px;
+}
+
+.content p:last-of-type {
+	width: 278px;
+	letter-spacing: -0.4px;
+	line-height: 1.714;
+	margin-top: 29px;
+	margin-bottom: 17px;
+}
+
+.content a {
+	font-size: 15px;
+	letter-spacing: -1.2px;
+	text-decoration: none;
+}
+
+.destination img {
+	position: absolute;
+	right: 0;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+.counters {
+	position: absolute;
+	top: 297px;
+	right: 13px;
+}
+
+.counters div {
+	display: inline-block;
+	height: 21px;
+	margin-right: 14px;
+}
+
+.counters span {
+	font-size: 17px;
+	margin-left: 32px;
+}
+
+.booking {
+	width: 346px;
+	height: 626px;
+}
+
+.place {
+	position: relative;
+	height: 185px;
+	color: #fbfbfb;
+}
+
+.place h3 {
+	position: absolute;
+	top: 93px;
+	left: 23px;
+	font-size: 25px;
+	letter-spacing: -0.4px;
+}
+
+.place p {
+	position: absolute;
+	top: 135px;
+	left: 26px;
+	font-size: 15px;
+	letter-spacing: -0.8px;
+	padding-left: 17px;
+}
+
+.booking form {
+	width: 298px;
+	margin: 0 auto;
+}
+
+.booking form fieldset {
+	padding: 0;
+	border: 0;
+	margin: 23px 0 66px 0;
+}
+
+.booking form label,
+.items-select h3 {
+	font-size: 15px;
+	letter-spacing: -0.6px;
+}
+
+.custom-input {
+	position: relative;
+	margin-top: 8px;
+}
+
+.custom-input input,
+input[placeholder] {
+	color: #999898;
+}
+
+.custom-input input,
+textarea {
+	background-color: #f4f4f4;
+	border: 1px solid #e5e5e5;
+	border-radius: 2px;
+	box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, .25);
+}
+
+.custom-input input {
+	position: absolute;
+	width: 94.5%;
+	height: 44px;
+	font-size: 15px;
+	padding-left: 14px;
+}
+
+.custom-input input:focus,
+.items-select select:focus,
+textarea:focus {
+	outline: none;
+}
+
+input[placeholder] {
+	letter-spacing: -0.6px;
+}
+
+.button-layer {
+	position: absolute;
+	width: 37px;
+	height: 37px;
+	top: 4px;
+	right: 5px;
+	background-color: #414b59;
+	border-radius: 2px;
+}
+
+.button-layer a {
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	top: 10px;
+	left: 10.5px;
+}
+
+.booking .checkbox {
+	margin-top: 67px;
+	margin-bottom: 0;
+}
+
+.checkbox input:not(checked) {
+	position: absolute;
+	opacity: 0;
+}
+
+.checkbox input+label {
+	font-size: 15px;
+	letter-spacing: -0.7px;
+}
+
+.checkbox input:not(checked)+label {
+	position: relative;
+	top: -5px;
+	padding: 0;
+	padding-left: 35px;
+}
+
+.checkbox input:not(checked)+label:before {
+	content: '';
+	position: absolute;
+	top: -4px;
+	left: 0;
+	width: 22px;
+	height: 22px;
+	background-color: #f4f4f4;
+	border: 1px solid #e5e5e5;
+	border-radius: 2px;
+}
+
+.checkbox input:checked+label:after {
+	content: url('../img/checkbox-checked.png');
+	position: absolute;
+	top: 2px;
+	left: 4px;
+}
+
+.booking .items-select {
+	margin-top: 22px;
+	margin-bottom: 40px;
+}
+
+.item {
+	display: inline-block;
+	position: relative;
+	width: 138px;
+}
+
+.item:last-of-type {
+	float: right;
+}
+
+.items-select h3 {
+	font-size: 15px;
+	font-weight: normal;
+	letter-spacing: -1px;
+	margin: 0;
+	margin-bottom: 8px;
+}
+
+.booking .items-select {
+	margin-top: 22px;
+	margin-bottom: 40px;
+}
+
+.items-select div {
+	display: inline-block;
+	width: 138px;
+}
+
+.items-select div:last-of-type {
+	float: right;
+}
+
+.items-select h3 {
+	font-size: 15px;
+	font-weight: normal;
+	letter-spacing: -1px;
+	margin: 0;
+	margin-bottom: 8px;
+}
+
+.items-select select {
+	width: 100%;
+	height: 44px;
+	background: url(../img/select-icon.png) 98% / 28% no-repeat #f4f4f4;
+	padding: 5px 35px 5px 15px;
+	border: 1px solid #e5e5e5;
+	border-radius: 2px;
+	box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, .25);
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.items-select select::-ms-expand {
+	display: none;
+}
+
+.button-action-booking {
+	position: relative;
+	letter-spacing: -0.4px;
+	padding-left: 29px;
+}
+
+.button-action-booking i {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: 20px;
+	left: 60px;
+}
+
+.email {
+	width: 330px;
+	height: 455px;
+	padding: 16px 25px;
+	margin-bottom: 30px;
+}
+
+.email-address {
+	position: absolute;
+	width: 188px;
+	height: 37px;
+	top: 5px;
+	left: 4px;
+	border-radius: 1px;
+}
+
+.email-address p {
+	font-size: 14px;
+	letter-spacing: -0.1px;
+	margin-top: 11px;
+	margin-left: 11px;
+}
+
+.email-address i {
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	top: 15px;
+	right: 8px;
+}
+
+.add-email-btn {
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	top: 16px;
+	right: 13px;
+	font-size: 20px;
+}
+
+.subject-input {
+	top: 70px;
+}
+
+.subject-input input[placeholder] {
+	width: 95.5%;
+	letter-spacing: -0.7px;
+	padding-left: 10px;
+}
+
+.subject-input i {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: 15px;
+	right: 13px;
+}
+
+.subject-input .upload {
+	position: absolute;
+	width: 10px;
+	height: 27px;
+	top: 10px;
+	right: -2px;
+	padding-left: 30px;
+	overflow: hidden;
+	z-index: 1;
+	opacity: 0;
+}
+
+textarea {
+	width: 304px;
+	height: 198px;
+	font-size: 14px;
+	padding: 12px;
+	margin-top: 141px;
+	resize: none;
+}
+
+.email-send-btn {
+	width: 127px;
+	height: 49px;
+	margin-top: 20px;
+	margin-left: 203px;
+}
