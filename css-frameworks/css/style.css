@@ -1,0 +1,968 @@
+@import 'bootstrap.min.css';
+
+@import url('https://fonts.googleapis.com/css?family=Lato:700,900|Source+Sans+Pro:400,700');
+
+@font-face {
+    font-family: 'MyriadPro-Regular';
+    src: url('../fonts/MyriadPro-Regular.eot?#iefix') format('embedded-opentype'), 
+        url('../fonts/MyriadPro-Regular.woff') format('woff'),
+        url('../fonts/MyriadPro-Regular.otf') format('opentype'),
+        url('../fonts/MyriadPro-Regular.ttf') format('truetype'),
+        url('../fonts/MyriadPro-Regular.svg#MyriadPro-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.navbar-nav li,
+.carousel-caption p,
+.carousel-caption button,
+.who-we-are p,
+.get-in-touch p,
+.get-in-touch button,
+.latest-work p,
+figcaption h6,
+.lw-carousel-caption h6,
+.footer-section-1 p,
+.footer-who-we-are a,
+address,
+.footer-free-updates input::placeholder,
+.footer-free-updates button,
+.footer-section-2,
+.footer-section-2 nav a {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.carousel-caption h2,
+.who-we-are h3,
+.who-we-are h4,
+.get-in-touch h3,
+.latest-work h3,
+figcaption h5,
+.lw-carousel-caption h5 {
+    font-family: 'Lato', sans-serif;
+}
+
+.search,
+.carousel-caption-3 p,
+.who-we-are h3,
+.who-we-are h4,
+.get-in-touch h3,
+.latest-work h3,
+figcaption h5,
+.navbar nav i {
+    color: #506a85;
+}
+
+.carousel-control:hover,
+.carousel-control:focus,
+.who-we-are .fa,
+.latest-work figure:hover figcaption h5,
+.latest-work igure:focus figcaption h5,
+.carousel-pagination span:hover i,
+.footer-section-2 nav a:hover,
+.footer-section-2 nav a:focus,
+.footer-who-we-are a:hover,
+.footer-who-we-are a:focus,
+address div:hover,
+address div:focus {
+    color: #00bc9c;
+}
+
+.who-we-are p,
+.latest-work p,
+.get-in-touch p,
+figcaption h6 {
+    color: #73879c;
+}
+
+.carousel-caption p,
+.footer-section-1 p,
+.footer-who-we-are a,
+address {
+    color: #a3b1bf; 
+}
+
+.carousel-caption button,
+.get-in-touch button,
+.carousel-caption-2 p,
+.carousel-caption-4 p,
+.lw-carousel-caption i,
+.lw-carousel-caption h5,
+.lw-carousel-caption h6,
+.carousel-pagination span i,
+.footer-section-1 h4,
+.footer-free-updates input,
+.footer-free-updates button {
+    color: #fff;
+}
+
+.search:hover,
+.search:focus,
+.carousel-pagination div:hover,
+.carousel-pagination div:focus,
+.latest-work figure:hover,
+.latest-work figure:focus,
+.carousel-imgs div:hover,
+.carousel-imgs div:focus,
+.carousel-pagination:hover span,
+.carousel-pagination:focus span,
+.footer-who-we-are img:hover,
+.footer-who-we-are img:focus,
+.footer-latest-work-img:hover, 
+.footer-latest-work-img:focus,
+address div:hover,
+address div:focus {
+    cursor: pointer;
+}
+
+.full-screen {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.nav-wrap {
+    position: relative;
+}
+
+.navbar-nav li {
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.nav li a {
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+.navbar-toggle {
+    margin-right: 30px;
+}
+
+.search {
+    position: absolute;
+    top: 26px;
+    right: 105px;
+}
+
+.carousel {
+    top: 70px;
+}
+
+.carousel-caption {
+    padding-bottom: 0;
+}
+
+.carousel-caption h2 {
+    font-size: 22px;
+    font-weight: 900;
+    line-height: 1.128;
+    letter-spacing: 4.75px;
+}
+
+.carousel-caption p {
+    display: none;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: .17px;
+}
+
+.carousel-caption-3 p {
+    color: #506a85;
+}
+
+.carousel-caption button {
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 0;
+}
+
+.carousel-caption-1 {
+    right: 23%;
+    left: 23%;
+}
+
+.carousel-caption-2 {
+    text-align: right;
+}
+
+.carousel-caption-3 {
+    text-align: left;
+}
+
+.carousel-caption-3 h2,
+.carousel-caption-4 h2,
+.carousel-indicators li,
+.carousel-pagination div {
+    background-color: #506a85;
+}
+
+.carousel-caption-3 h2,
+.carousel-caption-4 h2 {
+    font-size: 20px;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.carousel-caption-3 h2:first-of-type, 
+.carousel-caption-4 h2:first-of-type {
+    margin-bottom: 5px;
+}
+
+.carousel-caption-3 h2:last-of-type,
+.carousel-caption-4 h2:last-of-type {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.carousel-caption-3 h2 {
+    letter-spacing: 2.2px;
+}
+
+.carousel-caption-3 h2:first-of-type {
+    width: 154px;
+}
+
+.carousel-caption-3 h2:last-of-type {
+    width: 208px;
+}
+
+.carousel-caption-4 {
+    text-align: right;
+}
+
+.carousel-caption-4 h2 {
+    display: inline-block;
+    font-size: 18.3px;
+    letter-spacing: 2.8px;
+}
+
+.carousel-caption-4 p {
+    margin-left: 68px;
+}
+
+.carousel-caption-5 h2:first-of-type {
+	margin-bottom: 0;
+}
+
+.carousel-caption-5 h2:last-of-type {
+	margin-top: 0;
+}
+
+.carousel-indicators {
+    width: 7.64%;
+    height: 45px;
+    bottom: -30px;
+    left: 76.2%;
+    border-radius: 3px;
+    background-color: #fff;
+    padding-top: 15px;
+    visibility: hidden;
+}
+
+.carousel-indicators .active {
+    width: 17px;
+    height: 17px;
+}
+
+.carousel-indicators li,
+.carousel-pagination div {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+.carousel-indicators .active,
+.carousel-pagination div:nth-of-type(2) {
+    background-color: #00bc9c;
+}
+
+.who-we-are,
+.latest-work,
+.get-in-touch,
+footer {
+    position: relative;
+    top: 80px;
+}
+
+.who-we-are {
+    padding: 0;
+    padding-bottom: 15px;
+}
+
+.who-we-are h3,
+.latest-work h3,
+.get-in-touch h3 {
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    line-height: 1.227;
+    padding: 0 30px;
+}
+
+.who-we-are p,
+.latest-work p,
+.get-in-touch p {
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: .6px;
+    line-height: 1.65;
+    padding: 0;
+    padding-top: 13px;
+}
+
+.who-we-are p,
+.latest-work p,
+.get-in-touch p {
+    padding-right: 7%;
+    padding-bottom: 20px;
+    padding-left: 7%;
+}
+
+.who-we-are .fa {
+    font-size: 4em;
+}
+
+.who-we-are h4 {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.308;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.who-we-are-items p {
+    font-size: 16px;
+    letter-spacing: .16px;
+    line-height: 1.612;
+    padding: 0;
+    padding-bottom: 20px;
+}
+
+.latest-work,
+.get-in-touch {
+	padding: 10px 0 40px 0;
+}
+
+.latest-work {
+	background-color: #f2f5f7;
+}
+
+.latest-work div:only-child {
+	padding: 0;
+}
+
+.latest-work figure {
+	display: table;
+	margin: 0 auto;
+}
+
+.latest-work figure:first-child {
+	margin-bottom: 30px;
+}
+
+.latest-work img {
+	max-width: 100%;
+}
+
+figcaption {
+	background-color: #fff;
+	border-radius: 3px;
+	box-shadow: inset 0px -1px 0px 1px rgba(230, 233, 237, 0.004);
+	padding: 29px 0 19px 0;
+}
+
+figcaption h5 {
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 1.3;
+	letter-spacing: .3px;
+	padding: 0 20px;
+	margin-top: 0;
+}
+
+figcaption h6,
+.lw-carousel-caption h6 {
+	font-size: 15px;
+}
+
+.carousel-imgs {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	margin-top: 40px;
+}
+
+.carousel-img {
+	margin-bottom: 25px;
+}
+
+.lw-carousel-caption {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: 0;
+	width: calc(100% - 30px);
+	height: 100%;
+	background-color: rgba(9, 183, 156, .85);
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transition: all .35s ease-in-out;
+}
+
+figure .lw-carousel-caption {
+	height: calc(100% - 110px);
+}
+
+.footer-latest-work-img {
+	display: inline-block;
+}
+
+.footer-latest-work .lw-carousel-caption {
+	top: 52px;
+	width: 125px;
+	height: 85px;
+}
+
+.footer-latest-work-img:nth-of-type(n+3) .lw-carousel-caption {
+	top: 140px;
+}
+
+.lw-carousel-caption h5 {
+	font-size: 16px;
+	font-weight: 700;
+	margin-bottom: 0;
+}
+
+.carousel-pagination {
+	margin-top: 10px;
+}
+
+.carousel-pagination div {
+	display: inline-block;
+}
+
+.carousel-pagination div:nth-of-type(2) {
+	margin: 0 6px;
+}
+
+.carousel-pagination span {
+	position: relative;
+	top: -3px;
+	background-color: #c9d2da;
+	border-radius: 3px;
+	padding: 8px 12px 9px;
+	margin: 0 13px;
+	transition: all .35s ease-in-out;
+}
+
+.carousel-pagination span:hover {
+	background-color: #506a85;
+}
+
+.get-in-touch button {
+    font-size: 15px;
+    font-weight: 700;
+    width: 150px;
+    height: 50px;
+    letter-spacing: 1px;
+}
+
+.footer-section-1 {
+    background-color: #2f4052;
+    padding: 0;
+	padding-top: 20px;
+}
+
+.footer-items {
+	text-align: center;
+}
+
+.footer-items article,
+.footer-items > div {
+	padding-bottom: 20px;
+	border-bottom: 1px solid rgba(255, 255, 255, .3);
+	margin: 20px 15px;
+}
+
+.footer-items > div:last-child {
+	padding-bottom: 60px;
+	border: none;
+}
+
+.footer-section-1 h4 {
+    font-family: 'MyriadPro-Regular', sans-serif;
+    font-size: 16px;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+.footer-section-1 p {
+    font-weight: 400;
+    font-size: 14.6px;
+    line-height: 1.55;
+    margin: 20px 0 15px 0;
+}
+
+.footer-who-we-are img:hover,
+.footer-who-we-are img:focus {
+    opacity: 0.3;
+}
+
+.footer-who-we-are a {
+    font-weight: 700;
+}
+
+.footer-who-we-are a:hover,
+.footer-who-we-are a:focus,
+.footer-section-2 nav a:hover,
+.footer-section-2 nav a:focus {
+    text-decoration: none;
+}
+
+.footer-who-we-are a i {
+    margin-left: 5px;
+}
+
+.footer-latest-work img {
+    margin-bottom: 3px;
+}
+
+.footer-get-in-touch h4,
+.footer-free-updates h4 {
+    margin-bottom: 20px;
+}
+
+address {
+	margin-bottom: 0;
+}
+
+address div i {
+    margin-right: 17px;
+}
+
+address div:last-of-type i {
+    margin-right: 10px;
+}
+
+.footer-free-updates form {
+	position: relative;
+	text-align: left;
+}
+
+.footer-free-updates input {
+    position: absolute;
+    background-color: #4e5c6c;
+    width: calc(100%);
+    height: 40px;
+    border: 1px solid #4e5c6c;
+    border-radius: 3px;
+    outline: none;
+    padding-left: 10px;
+}
+
+input::placeholder {
+    font-size: 14px;
+    color: #828e99;
+    line-height: 1.571;
+}
+
+.footer-free-updates button {
+    position: absolute;
+    font-size: 13px;
+    top: 4px;
+	left: calc(100% - 99px);
+    letter-spacing: .7px;
+}
+
+.footer-section-2 {
+    text-align: center;
+    background-color: #283645;
+    padding: 20px;
+    padding-bottom: 25px;
+}
+
+.footer-section-2 p,
+.footer-section-2 nav a,
+.footer-section-2 nav span {
+    font-size: 14px;
+    color: #707e8c;
+}
+
+.footer-section-2 nav a {
+    margin: 0 9px;
+}
+
+.footer-section-2 nav a:last-of-type {
+    margin-right: 0;
+}
+
+
+@media screen and (min-width: 768px) {
+    .nav li a {
+        padding: 26px 1px 24px;
+    }
+    
+    .search {
+        right: 1.5%;
+    }
+    
+    .carousel-caption {
+        padding-bottom: 20px;
+    }
+    
+    .carousel-caption h2 {
+        font-size: 46px;
+    }
+    
+    .carousel-caption p {
+        display: block;
+    }
+    
+    .carousel-caption button {
+        width: 295px;
+        height: 65px;
+    }
+    
+    .carousel-caption-3 h2,
+    .carousel-caption-4 h2 {
+        height: 55px;
+        line-height: 55px;
+    }
+    
+    .carousel-caption-3 h2:first-of-type {
+        width: 301px;
+    }
+
+    .carousel-caption-3 h2:last-of-type {
+        width: 414px;
+    }
+    
+	.carousel-caption-4 {
+		right: 19%;
+		left: 19%;
+	}
+	
+    .carousel-caption-4 h2 {
+        font-size: 45px;
+    }
+	
+	.carousel-caption-5 {
+		top: 4%;
+	}
+	
+	.who-we-are .fa {
+		font-size: 4.7em;
+	}
+	
+	figure:hover .lw-carousel-caption,
+	figure:focus .lw-carousel-caption,
+	.carousel-img:hover .lw-carousel-caption,
+	.carousel-img:focus .lw-carousel-caption,
+	.carousel-pagination:hover span,
+	.footer-latest-work-img:hover .lw-carousel-caption,
+	.footer-latest-work-img:focus .lw-carousel-caption {
+		opacity: 1;
+	}
+	
+	.carousel-pagination span {
+		opacity: 0;
+	}
+	
+	.footer-section-1 {
+		padding-bottom: 15px;
+	}
+	
+	.footer-section-1 div:only-child {
+		padding: 0;
+	}
+	
+	.footer-items article,
+	.footer-items > div {
+		border-bottom: none;
+		margin: 0;
+	}
+    
+    .footer-section-2 {
+        padding-top: 30px;
+        padding-bottom: 23px;
+    }
+    
+    .footer-section-2 p {
+        float: left;
+    }
+    
+    .footer-section-2 nav {
+        float: right;
+    }
+}
+
+@media screen and (min-width: 992px) {
+	.navbar, .navbar-brand {
+		height: 112px;
+	}
+	
+	.navbar-brand {
+		line-height: 82px;
+	}
+	
+	.navbar-brand img {
+		display: inline-block;
+	}
+	
+	.nav li a {
+		padding: 15px;
+	}
+	
+    .navbar-center {
+        position: relative;
+        top: 33px;
+        left: 0;
+    }
+    
+    .search {
+        top: 45px;
+    }
+    
+	.carousel {
+		top: 112px;
+	}
+    
+    .carousel-caption h2 {
+        font-size: 58px;
+    }
+    
+    .carousel-caption p {
+        font-size: 21px;
+    }
+    
+    .carousel-caption button {
+        margin-top: 52px;
+    }
+    
+    .carousel-caption-2 {
+		margin-right: -20px;
+        margin-left: 15%;
+    }
+    
+    .carousel-caption-3 {
+        margin-right: 20%;
+    }
+    
+    .carousel-caption-3 h2 {
+        font-size: 73px;
+        height: 75px;
+        line-height: 75px;
+    }
+    
+    .carousel-caption-3 h2:last-of-type,
+    .carousel-caption-4 h2:last-of-type {
+        margin-bottom: 30px;
+    }
+    
+    .carousel-caption-3 h2:first-of-type {
+        width: 454px;
+    }
+
+    .carousel-caption-3 h2:last-of-type {
+        width: 628px;
+    }
+    
+    .carousel-caption-4 h2 {
+        font-size: 60px;
+        height: 70px;
+        line-height: 70px;
+    }
+    
+	.carousel-caption-5 {
+		top: 4.5%;
+	}
+	
+    .who-we-are,
+    .latest-work,
+    .get-in-touch,
+    footer {
+        top: 113px;
+    }
+    
+    .who-we-are {
+        padding-top: 100px;
+        padding-bottom: 118px;
+    }
+    
+    .who-we-are h3,
+    .latest-work h3,
+    .get-in-touch h3 {
+        font-size: 44px;
+    }
+    
+    .who-we-are > div > p,
+    .latest-work p,
+    .get-in-touch p {
+        font-size: 21px;
+    }
+    
+    .who-we-are p {
+        padding-right: 12%;
+        padding-bottom: 58px;
+        padding-left: 12%;
+    }
+    
+    .who-we-are-items p {
+        padding: 0;
+    }
+	
+	.latest-work,
+	.get-in-touch {
+		padding: 100px 0 132px 0;
+	}
+	
+	.latest-work p {
+		padding-bottom: 64px;
+	}
+	
+	.latest-work figure:first-child,
+	.carousel-img {
+		margin-bottom: 0;
+	}
+	
+	.carousel-imgs {
+		text-align: left;
+		margin-top: 83px;
+	}
+	
+	.carousel-pagination {
+		margin-top: 45px;
+	}
+	
+	.get-in-touch {
+		padding-bottom: 132px;
+	}
+	
+	.get-in-touch p {
+		padding-bottom: 27px;
+	}
+	
+	.footer-section-1 {
+		padding: 63px 0 50px 0;
+	}
+	
+	.footer-items {
+		text-align: left;
+	}
+	
+	.footer-items article,
+	.footer-items > div {
+		padding-bottom: 0;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+    .navbar-center {
+        position: absolute;
+        left: 20%;
+    }
+    
+    .carousel-caption p {
+        font-size: 25px;
+    }
+    
+    .carousel-caption h2 {
+        font-size: 78px;
+    }
+    
+    .carousel-caption-1 h2 {
+        margin-left: 20px;
+    }
+    
+    .carousel-caption-1 button {
+        margin-left: 15px; 
+    }
+    
+    .carousel-caption-3 h2,
+    .carousel-caption-4 h2 {
+        font-size: 73px;
+        height: 125px;
+        line-height: 125px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    
+    .carousel-caption-3 h2:first-of-type {
+        width: 520px;
+    }
+
+    .carousel-caption-3 h2:last-of-type {
+        width: 690px;
+    }
+    
+    .carousel-caption-4 h2 {
+        height: 125px;
+        line-height: 125px;
+    }
+
+    .carousel-caption-4 h2:last-of-type {
+        margin-left: -45px;
+    }
+    
+	.carousel-caption-5 {
+		right: 21%;
+		left: 21%;
+	}
+	
+    .who-we-are > div > p {
+        padding-right: 17.2%;
+        padding-left: 17.2%;
+    }
+    
+    .footer-section-1 {
+        padding-bottom: 70px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .carousel-caption-1 {
+        top: 28%;
+    }
+    
+    .carousel-indicators {
+        visibility: visible;
+    }
+    
+    .carousel-caption-4 {
+        top: 4.5%;
+        margin-left: 18%;
+    }
+    
+    .carousel-caption-4 h2:first-of-type {
+        margin-left: -61px;
+    }
+
+    .carousel-caption-4 h2:last-of-type {
+        margin-left: -161px;
+    }
+	
+	.carousel-caption-5 {
+		right: 26%;
+		left: 26%;
+	}
+}
+
+@media screen and (min-width: 1600px) {
+    .carousel-caption-2 {
+        top: 23%;
+    }
+    
+    .carousel-caption-3 {
+        top: 18%;
+    }
+	
+	.carousel-caption-5 {
+		right: 32%;
+		left: 32%;
+	}
+}
